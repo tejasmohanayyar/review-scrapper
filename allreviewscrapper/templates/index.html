@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ {% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Review Scrapper</h1>
+
+    <div class="form">
+        For deployment
+        <form action="/scrap" method="POST">
+<!--        <form action="/" method="POST">-->
+            <center><input type="text" name="content" id="content" placeholder = "Product name to search"></center>
+            <br>
+            <br>
+            <center><input type="text" name="numberpages" id="numberpages" placeholder = "Number of pages"></center>
+            <br>
+            <br>
+           <center><input type="submit" id = "submit" value="Search"></center>
+        </form>
+    </div>
+</div>
+{% endblock %}
